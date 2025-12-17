@@ -1,0 +1,12 @@
+2025-12-15 19:51:16,567 [ERROR] Autopost loop error: get_type_priority() missing 1 required positional argument: 'category'
+Traceback (most recent call last):
+  File "c:\Users\anapi\Desktop\ph-20250604T072656Z-1-001\TumiTGBot-main\main.py", line 292, in autopost_loop
+    ids = await get_products_for_autopost(db, AUTOPOST_BATCH_SIZE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\anapi\Desktop\ph-20250604T072656Z-1-001\TumiTGBot-main\main.py", line 285, in get_products_for_autopost
+    rows_sorted = sorted(rows, key=lambda x: get_type_priority(x[1]))
+  File "c:\Users\anapi\Desktop\ph-20250604T072656Z-1-001\TumiTGBot-main\main.py", line 285, in <lambda>
+    rows_sorted = sorted(rows, key=lambda x: get_type_priority(x[1]))
+                                             ~~~~~~~~~~~~~~~~~^^^^^^
+TypeError: get_type_priority() missing 1 required positional argument: 'category'
+2025-12-15 20:04:46,271 [ERROR] ⚠️ Flood control hit for product 2606. Retry 1/3 after 5s.
